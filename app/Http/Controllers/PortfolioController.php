@@ -5,45 +5,72 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
-
 {
-
     public function index()
-
     {
-
-        // Your portfolio data - you can modify these details
-
         $portfolio = [
 
-            'name' => 'Dela cruz, Carl Angelo E.',
+         
+            // Basic Info
+            'name'          => 'Carl Angelo E. Dela Cruz',
+            'title'         => 'Fullstack Web Developer',
+            'bio'           => 'I’m a 2nd-year IT student who loves learning how technology works and how to turn ideas into real projects. I’m currently exploring web development and programming while building my skills for future opportunities.',
+            'profile_image' => asset('images/unnamed.jpg'),
 
-            'title' => 'Full Stack Web Developer',
 
-            'email' => 'carldelacruz0321@gmail.com',
+            // Contact Info
+            'email'    => 'carldelacruz0321@gmail.com',
+            'phone'    => '09945349328',
+            'location' => 'Manila, Philippines',
 
-            'phone' => '+9945349328',
+            
+            // Skills         
+            'skills' => [
+                'Active listening skills',
+                'Time management skill',
+                'Can work under pressure',
+                'Teamwork',
+                'Multi-tasking',
+            ],
 
-            'location' => 'PH, Manila',
+            
+            // Work Experience          
+            'experience' => [
+                [
+                    'role'     => 'Waiter',
+                    'company'  => 'Chef Patrick’s Kitchen',
+                    'duration' => '2021-2022',
+                ],
+                [
+                    'role'     => 'Service Crew',
+                    'company'  => 'Greenwich - FisherMall Malabon',
+                    'duration' => '2022-2023',
+                ],
+                [
+                    'role'     => 'Service Crew',
+                    'company'  => 'Jollibee Concepcion Malabon',
+                    'duration' => '2024-2025',
+                ],
+            ],
 
-            'bio' => 'Passionate web developer with 5+ years of experience in creating responsive and dynamic web applications.',
+            
+            // Education
+            'education' => [
+                [
+                    'degree' => 'BS in Information Technology',
+                    'school' => 'Global Reciprocal College',
+                    'year'   => '2nd Year',
+                ],
+            ],
 
-            'profile_image' => './image/unnamed.jpg',
-
-            'skills' => ['Laravel', 'PHP', 'JavaScript', 'HTML5', 'CSS3'],
-
-            'projects' => [], // Project data
-
-            'experience' => [], // Experience data
-
-            'education' => [], // Education data
-
-            'social_links' => [] // Social media links
-
+            // Social Links
+            'social_links' => [
+                'facebook'  => 'https://www.facebook.com/share/1CfMUyBJbj/?mibextid=wwXIfr',
+                'instagram' => 'https://www.instagram.com/invites/contact/?igsh=1qv1vkpi49xhi&utm_content=xmmc1jp',
+                'github'    => 'https://github.com/carlzz01',
+            ],
         ];
 
-        return view('portfolio.index', compact('portfolio'));
-
+        return view('portfolio.portfolio', compact('portfolio'));
     }
-
 }

@@ -4,70 +4,89 @@
 
 @section('content')
 
-<!-- Hero Section -->
+    <!-- ================= HERO SECTION ================= -->
+    <section id="hero" class="hero-section fade-in">
+        <div class="container">
+            <!-- Profile -->
+            <img 
+                src="{{ asset('images/unnamed.jpg') }}" 
+                alt="{{ $portfolio['name'] }}" 
+                class="profile-img"
+            >
 
-<section class="hero-section">
+            <!-- Intro -->
+            <h1 class="hero-name">{{ $portfolio['name'] }}</h1>
+            <h3 class="hero-title">{{ $portfolio['title'] }}</h3>
+            <p class="hero-bio">{{ $portfolio['bio'] }}</p>
+        </div>
+    </section>
 
-    
-    <div class="container">
+    <!-- Dark Mode Toggle -->
+    <button id="theme-toggle" class="darkmode-btn">🌙</button>
 
-        <img src="./image/unnamed.jpg" alt="{{ $portfolio['name'] }}" class="profile-img">
 
-        <h1 class="display-4 mb-3">{{ $portfolio['name'] }}</h1>
-
-        <h3 class="mb-4">{{ $portfolio['title'] }}</h3>
-
-        <p class="lead mb-4">{{ $portfolio['bio'] }}</p>
-
-    </div>
-
-</section>
-
-<!-- About Section -->
-
-<section id="about" class="section">
-
-    <div class="container">
-
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="section fade-in">
         <h2 class="section-title">About Me</h2>
-        
-    <div style="max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0px 4px 20px rgba(0,0,0,0.1);">
-        <p style="font-size: 1.1rem; line-height: 1.6;">
-            Hi, I’m <b>Carl Angelo E. Dela Cruz</b>, a dedicated Full Stack Web Developer with a passion for building modern, user-friendly, and scalable web applications. With over 5 years of experience, I’ve worked on different technologies including <b>Laravel, PHP, JavaScript, React, and MySQL</b>. I love solving problems and turning ideas into real projects.
-        </p>
-    </div>
-        <!-- About content -->
+        <p>{{ $portfolio['about'] }}</p>
+    </section>
 
-    </div>
 
-</section>
+    <!-- ================= SKILLS SECTION ================= -->
+    <section id="skills" class="section fade-in">
+        <h2 class="section-title">Skills</h2>
+        <ul>
+            @foreach($portfolio['skills'] as $skill)
+                <li>{{ $skill }}</li>
+            @endforeach
+        </ul>
+    </section>
 
-<!-- Projects Section -->
 
-<section id="projects" class="section bg-light">
+    <!-- ================= EXPERIENCE SECTION ================= -->
+    <section id="experience" class="section fade-in">
+        <h2 class="section-title">Experience</h2>
+        @foreach($portfolio['experience'] as $exp)
+            <div class="experience-item">
+                <h3>{{ $exp['role'] }} - {{ $exp['company'] }}</h3>
+                <p>{{ $exp['year'] }}</p>
+                <p>{{ $exp['details'] }}</p>
+            </div>
+        @endforeach
+    </section>
 
-    <div class="container">
 
-        <h2 class="section-title">My Projects</h2>
+    <!-- ================= EDUCATION SECTION ================= -->
+    <section id="education" class="section fade-in">
+        <h2 class="section-title">Education</h2>
+        @foreach($portfolio['education'] as $edu)
+            <div class="education-item">
+                <h3>{{ $edu['degree'] }}</h3>
+                <p><strong>{{ $edu['school'] }}</strong></p>
+                <p>{{ $edu['year'] }}</p>
+            </div>
+        @endforeach
+    </section>
 
-        <!-- Projects content -->
 
-    </div>
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="section fade-in">
+        <h2 class="section-title">Contact</h2>
+        <p>If you'd like to work with me or just say hi, feel free to reach out!</p>
 
-</section>
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="https://facebook.com" class="facebook" target="_blank">📘</a>
+            <a href="https://instagram.com" class="instagram" target="_blank">📸</a>
+            <a href="https://github.com" class="github" target="_blank">🐙</a>
+            <a href="mailto:{{ $portfolio['email'] }}" class="gmail">✉️</a>
+        </div>
 
-<!-- Contact Section -->
+        <!-- Email Button -->
+        <a href="mailto:{{ $portfolio['email'] }}" class="btn-primary">📧 Email Me</a>
+    </section>
 
-<section id="contact" class="section">
-
-    <div class="container">
-
-        <h2 class="section-title">Get In Touch</h2>
-
-        <!-- Contact content -->
-
-    </div>
-
-</section>
+    <!-- ================= SCRIPTS ================= -->
+    <script src="{{ asset('js/portfolio.js') }}"></script>
 
 @endsection
