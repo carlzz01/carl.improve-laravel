@@ -82,13 +82,13 @@
 
         <!-- Social Links (Icons) -->
         <div class="social-links">
-            <a href="https://facebook.com/yourusername" target="_blank" class="facebook">
+            <a href="https://www.facebook.com/share/1CfMUyBJbj/?mibextid=wwXIfr" target="_blank" class="facebook">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://instagram.com/yourusername" target="_blank" class="instagram">
+            <a href="https://www.instagram.com/invites/contact/?igsh=1qv1vkpi49xhi&utm_content=xmmc1jp" target="_blank" class="instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://github.com/yourusername" target="_blank" class="github">
+            <a href="https://github.com/carlzz01" target="_blank" class="github">
                 <i class="fab fa-github"></i>
             </a>
             <a href="https://myaccount.google.com/?pli=1" class="gmail" title="My Google">
