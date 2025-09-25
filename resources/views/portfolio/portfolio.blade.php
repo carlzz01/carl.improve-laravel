@@ -91,7 +91,7 @@
             <a href="https://github.com/carlzz01" target="_blank" class="github">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://myaccount.google.com/?pli=1" class="gmail" title="My Google">
+            <a href="https://myaccount.google.com/?pli=1" target="_blank" class="gmail" title="My Google">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" width="22" height="22">
                     <path fill="#4285F4" d="M488 261.8c0-17.7-1.6-35-4.7-51.6H250v97.6h134.1c-5.8 31.2-23 57.6-49.2 75.2v62h79.5c46.5-42.9 73.6-106.1 73.6-183.2z"/>
                     <path fill="#34A853" d="M250 500c66.7 0 122.6-22.1 163.4-60.1l-79.5-62c-22.1 14.9-50.4 23.8-83.9 23.8-64.5 0-119-43.6-138.4-102.1H29.1v63.9C69.5 449.3 154.3 500 250 500z"/>
